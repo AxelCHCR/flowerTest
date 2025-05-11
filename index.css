@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: #ffe135; /* Amarillo pollo */
+    font-family: 'Segoe UI', Arial, sans-serif;
+    position: relative;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+    box-sizing: border-box;
+  }
+  
+  .background-gifs {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 30px;
+    z-index: 1;
+  }
+  
+  .girasol-gif {
+    width: 100px;
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    animation: float 6s ease-in-out infinite alternate;
+  }
+  
+  .girasol-gif:nth-child(1) {
+    animation-delay: 0s;
+  }
+  .girasol-gif:nth-child(2) {
+    animation-delay: 2s;
+  }
+  .girasol-gif:nth-child(3) {
+    animation-delay: 4s;
+  }
+  
+  @keyframes float {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-15px); }
+  }
+  
+  .ventana-texto {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    padding: 30px 35px;
+    max-width: 350px;
+    width: 90%;
+    text-align: center;
+    border: 2px solid #ffd700;
+    margin-bottom: 30px;
+    z-index: 2;
+  }
+  
+  .ventana-texto h2 {
+    margin-top: 0;
+    color: #e1ad01;
+    font-size: 1.8em;
+  }
+  
+  .ventana-texto p {
+    font-size: 1.1em;
+    color: #555;
+    margin-top: 10px;
+  }
+  
+  #te-amo-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5em;
+    color: #c97d02;
+    font-weight: 700;
+    min-height: 100px;
+    width: 90%;
+    max-width: 350px;
+    overflow-y: auto;
+    z-index: 2;
+  }
+  
+  /* Responsive: en pantallas muy pequeñas, los gifs se apilan verticalmente */
+  @media (max-width: 480px) {
+    .background-gifs {
+      flex-direction: column;
+      gap: 15px;
+      max-width: 150px;
+    }
+  
+    .girasol-gif {
+      width: 120px;
+    }
+  }
+  
